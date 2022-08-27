@@ -25,12 +25,12 @@ jobs:
 
       - name: Download and Unzip Upstream Source Code
         run: |
-          curl -OL https://github.com/whyour/qinglong/archive/refs/heads/${{ github.ref_name }}.zip
-          unzip *.zip
+          curl -OL https://github.com/whyour/qinglong/archive/refs/heads/develop.zip
+          unzip develop.zip
 
       - name: build front and back
         run: |
-          cd ./qinglong-${{ github.ref_name }}/
+          cd ./qinglong-develop/
           npm i -g pnpm
           pnpm install
           pnpm build:front
@@ -41,7 +41,7 @@ jobs:
           GITHUB_REPO: github.com/${{ github.repository_owner }}/qinglong-static
           GITHUB_BRANCH: ${{ github.ref_name }}
         run: |
-          cd ./qinglong-${{ github.ref_name }}/
+          cd ./qinglong-develop/
           mkdir -p tmp
           cd ./tmp
           cp -rf ../static/* ./
