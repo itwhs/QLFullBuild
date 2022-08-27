@@ -98,5 +98,5 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
 # 给清单打上多个标签
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/qinglong:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/qinglong:${{ steps.date.outputs.today }}
+            ${{ secrets.DOCKER_USERNAME }}/qinglong:latest
+            ${{ secrets.DOCKER_PASSWORD }}/qinglong:${{ steps.date.outputs.today }}
