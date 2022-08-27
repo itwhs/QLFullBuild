@@ -27,11 +27,13 @@ jobs:
         run: |
           curl -OL https://github.com/whyour/qinglong/archive/refs/heads/${{ github.ref_name }}.zip
           unzip *.zip
-          cp -ar ./qinglong-${{ github.ref_name }}/* .
-          cp -ar ./qinglong-${{ github.ref_name }}/.* .
+          cd ./qinglong-${{ github.ref_name }}/
+          ls -alrth
 
       - name: build front and back
         run: |
+          pwd
+          ls -alrth
           npm i -g pnpm
           pnpm install
           pnpm build:front
