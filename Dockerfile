@@ -61,7 +61,7 @@ RUN set -x \
     && git config --global user.name "qinglong" \
     && git config --global http.postBuffer 524288000 \
     && npm install -g pnpm \
-    && pnpm add -g pm2 ts-node typescript tslib canvas png-js axios date-fns ts-md5 crypto-js crypto tough-cookie got@11 download md5 qrcode-terminal request @types/node jsdom prettytable dotenv ws@7.4.3 jieba fs form-data json5 global-agent js-base64 \
+    && pnpm add -g pm2 ts-node typescript tslib canvas png-js axios date-fns ts-md5 crypto-js crypto tough-cookie got@11 download md5 qrcode-terminal request @types/node jsdom prettytable dotenv ws@7.4.3 jieba fs form-data json5 global-agent js-base64 ds console-grid \
     && pip install --upgrade pip \
     && pip install requests canvas ping3 jieba selenium PyExecJS aiohttp json5 pycryptodomex tomli_w beautifulsoup4 dailycheckin -i https://mirrors.aliyun.com/pypi/simple/ \
     && git clone -b ${QL_BRANCH} ${QL_URL} ${QL_DIR} \
