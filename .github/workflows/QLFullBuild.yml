@@ -93,8 +93,7 @@ jobs:
           platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
           # 镜像推送时间
           push: ${{ github.event_name != 'pull_request' }}
-          # 给清单打上多个标签
-          tags: |
+          tags: |          # 给清单打上多个标签
             ${{ secrets.DOCKER_USERNAME }}/qinglong:latest
             ${{ secrets.DOCKER_USERNAME }}/qinglong:${{ github.ref_name }}
             ${{ secrets.DOCKER_USERNAME }}/qinglong:${{ steps.date.outputs.today }}
